@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+enum ComponentType {
+  COMPONENT_TYPE_UNSPECIFIED = 0;
+  COMPONENT_TYPE_TEXT = 1;
+  COMPONENT_TYPE_IMAGE = 2;
+}
+
+message Component {
+  float x = 1;
+  float y = 2;
+  float width = 3;
+  float height = 4;
+  string content = 5;
+  string imageFile = 6;
+  ComponentType type = 7;
+}
+
+message Page {
+  string slideId = 1;
+  repeated Component components = 2;
+}
+
+message Module {
+  string name = 1;
+  string moduleId = 2;
+  string title = 3;
+  string author = 4;
+  int32 slideCount = 5; 
+  double width = 6;
+  double height = 7;
+  repeated Page pages = 8;
+}
