@@ -2,7 +2,7 @@
 ## Luna IR schema protobuf prototype
 
 
-Uses [protobuf](https://protobuf.dev/getting-started/darttutorial/ to create and use Dart data objects from a [protobuf message definition](./lib/model/schema/ir_schema.proto).
+Uses [protobuf](https://protobuf.dev/getting-started/darttutorial) to create and use Dart data objects from a [protobuf message definition](./lib/model/schema/ir_schema.proto).
 
 protoc is then used to generate the data model object code:
 
