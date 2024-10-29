@@ -42,9 +42,9 @@ Module createModule() {
 void main() {
   Module m = createModule();
   print('module: $m');
+  
   var tempDir = Directory.systemTemp.createTempSync('temp_dir');
   var moduleFileName = '${tempDir.path}/module_file';
-  
   File moduleFile = File(moduleFileName);
   moduleFile.writeAsBytesSync(m.writeToBuffer());
 
